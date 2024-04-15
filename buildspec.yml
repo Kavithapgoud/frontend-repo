@@ -1,22 +1,13 @@
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "s3:InitiateReplication",
-                "s3:GetReplicationConfiguration",
-                "s3:PutInventoryConfiguration"
-            ],
-            "Resource": [
-                "arn:aws:s3:::sourcebucket-madhavi",
-                "arn:aws:s3:::sourcebucket-madhavi/*"
-            ]
-        },
-        {
-            "Effect": "Allow",
-            "Action": "s3:PutObject",
-            "Resource": "arn:aws:s3:::bucket-frontend-1/*"
-        }
-    ]
-}
+{version: 0.2
+phases:
+  install:
+    commands:
+  pre_build:
+    commands:
+      
+  build:
+    commands:     
+      
+  post_build:
+    commands:
+      - aws s3 sync . s3://bucket-frontend-1
