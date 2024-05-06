@@ -1,0 +1,31 @@
+Docker: Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly.By using Docker methodologies we can significantly reduce the delay between writing code and running it in production.
+
+Docker platform: Docker provides the ability to package and run an application in a loosely isolated environment called a container.  Containers are lightweight and contain everything needed to run the application, so you don't need to rely on what's installed on the host.
+
+why we need docker: Your developers write code locally and share their work with their colleagues using Docker containers.
+    They use Docker to push their applications into a test environment and run automated and manual tests.
+    When developers find bugs, they can fix them in the development environment and redeploy them to the test environment for testing and validation.
+    When testing is complete, getting the fix to the customer is as simple as pushing the updated image to the production environment.
+
+docker registry: A Docker registry stores Docker images. Docker Hub is a public registry that anyone can use, and Docker looks for images on Docker Hub by default. You can even run your own private registry.When you use the docker pull or docker run commands, Docker pulls the required images from your configured registry. When you use the docker push command, Docker pushes your image to your configured registry.
+
+When you use the docker pull or docker run commands, Docker pulls the required images from your configured registry. When you use the docker push command, Docker pushes your image to your configured registry.
+
+
+Image: image is a read-only template with instructions for creating a Docker container. Often, an image is based on another image, with some additional customization.You might create your own images or you might only use those created by others and published in a registry. To build your own image, you create a Dockerfile with a simple syntax for defining the steps needed to create the image and run it. Each instruction in a Dockerfile creates a layer in the image.
+
+Basic Commands In Docker: 
+Docker Image: List all the pulled images which are present in our system. It shows information like image ID, repository and tag.
+
+Docker Pull: this command allows you to pull any image which is present in the official registry of docker, DockerHub. now that we know the name of the image we can pull that from the docker pull.
+
+Docker Build: The docker build command is used to build the docker images with the help of dockerfile.
+
+Docker Login: The docker login command will help you to authenticate with docker hub by which you can push and pull your images.
+
+Docker Exec: This command executes commands within a running container.
+
+Docker run: this docker is used to start a docker container from a docker image
+
+Container: It is a way to package application with all the necessary dependencies  and configuration. this can be shared easily. they are layers of images stacked on top of each other. the base OS image would be very small in size like alpine linux (5mb) that works as a docker image which will be found in docker hub and we can download this and we can istall our desired applications and if we want to add additional libraries also can be installed. 
+

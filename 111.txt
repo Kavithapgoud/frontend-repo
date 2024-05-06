@@ -1,0 +1,85 @@
+ubuntu
+
+sudo get-update -y means to refresh the local system and to get the new info
+sudo apt install apache2 -y to allow the system to complete the installation
+cd /var/www/html/ means it is the default root folder for web servers based on uni based or Linux systems
+ls means to list all the contents
+sudo rm index.html means to remove the default apache2 file
+sudo nano index.html means to open the file in index.html in nano text editor for editing
+ctrl s
+ctrl x
+
+How to pull nginx base image from docker hub
+
+docker pull we need to copy and paste the nginx file
+what next then docker images
+aws configure
+access key
+secret key
+ecr login password..we need to go to ecr and open repository (docker) and then view push command option and click on that. after that we need to copy and paste one point regarding ecr login and password. then we need to paste third point and add image name before account id
+then copy fourth point it shows pushed and after that we need to type docker create and it will create container and we have to go and check docker desktop and click on the image and click on run and the process will start.
+
+how to pull an image from docker hub
+first we need to open docker hub and select nginx hub and in that select tags and copy one command
+in cmd we need to paste that image command (docker pull nginx stable perl)
+docker images
+aws configure
+go to ecr repository and select the repository (by name docker) then click on view push commands. we need to paste first point about ecr login and password
+access key
+secret key
+then copy and paste third point and add name before account id
+then copy fourth point and it shows pushed and then type docker create to create the container
+then we have to open the docker desktop and click on downloaded image and select run and the process will start
+sudo get-update -y
+sudo get install apache2 -y
+ls
+cd /var/www/html/
+sudo rm index.html
+sudo nano index.html
+ctrl s
+ctrl x
+
+creating a docker file with customized image file 
+docker pull means (image name) means to pull the base image from docker hub
+docker create means (image name ) to create a container
+docker run (image name) means to pull an image and also to create container
+docker build -t means (our image name)
+docker run -p (port:port) (our image name)
+
+FROM ubuntu
+RUN apt-get update
+RUN apt-get install apache2 -y
+ADD . /var/www/html
+EXPOSE 80
+CMD [ "apache2ctl","-D","FOREGROUND" ]
+
+creating a docker file with customized image file
+
+Linux commands
+ls-list all contents in the file or directory
+pwd-print the current working directory
+cd-change current working directory
+mkdir-make a new directory
+cp-to copy files or groups of files and directories
+rm-it removes and used to delete files and directories
+Touch-it is used to create a new empty file and to change the timestamps of existing files
+In-to create hard links and soft links
+Clear-to clear the terminal, we use clear command or ctrl + L
+Cat-It reads files sequentially displaying their contents to the terminal. use catfile1 catfile2>newfile to merge or cat file to view the file's contents
+echo-it is a way to communicate with Linux terminal. it acts like a messenger that delivers your words to the terminal.
+Less-it is used to read the contents of a text file one page {one screen} at a time.
+man-it is used to display the user manual of any command that we can run on the terminal
+uname: it is used to display system information
+whoami-it displays the username of the current user
+tar-it is used to create, extract and modify archives
+grep-it is used to search and manipulate text patterns within files
+head-the head command is used to display the first part of the files 
+tail-it prints the last N number of data of the given output
+diff-it is used to compare two files line by line and display the difference between them
+cmp-it is used to compare two files byte by byte and helps us to find out whether two files are identical or not
+comm-compare two sorted files line by line and write to standard output
+sort-it is used for sorting file contents and printing the results in standard output.
+export-it is used to export environmental variables from shell to child processes
+zip-it is used to compress and package one or more files or directories into a single zip
+
+	
